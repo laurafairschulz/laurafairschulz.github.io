@@ -12,19 +12,19 @@ h1, h2, h3, h4, h5, h6 {
 
 img{
     background-color:#e8e8e8;
-    border: 2px solid #9a0026;
+    border: 2px solid black;
 }
 
 header{
     max-width:500px;
     margin:auto auto 100px auto;
     text-align:center;
-    background-image: url('17th.jpeg');
+    background-image: url('Abstract.jpeg');
     background-size:100%;
     background-attachment:fixed;
-    background-position:bottom;
+    background-position:top;
     padding:20px;
-    border: 2px solid #9a0026;
+    border: 2px solid black;
     color:white;
 }
 
@@ -43,7 +43,7 @@ img{
     display:inline-block;
 }
 
-img:hover{
+main img:hover{
     border:2px solid #b84c67;
 }
 
@@ -94,4 +94,5 @@ img:hover{
     -moz-box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.65);
     box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.65);
     object-fit:cover;
+    border:1px solid white;
 }
