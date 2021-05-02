@@ -1,23 +1,43 @@
+header {
+}
+
 body{
-    background-image: url('grey.png');
+    background: linear-gradient(#1A3668,#d2bddb,#e7f2c8,#1A3668);
     background-size:cover;
     font-family: 'Montserrat', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
     text-align:center;
 }
 
-header, img{
+img{
     background-color:#e8e8e8;
     border: 2px solid #9a0026;
 }
 
 header{
-    max-width:750px;
+    max-width:500px;
     margin:auto auto 100px auto;
     text-align:center;
+    background-image: url('Abstract.jpeg');
+/*    background-size:100%;*/
+    background-attachment:fixed;
+    background-position:bottom;
+    padding:20px;
+    border: 2px solid #9a0026;
+    color:white;
+}
+
+header h1{
+    text-shadow:-1px -1px 2px black;
+    font-size:48px;
+}
+
+header p{
+    text-shadow:-1px 1px 2px black;
+    font-size:32px;
 }
 
 img{
