@@ -19,15 +19,14 @@ header{
     max-width:500px;
     margin:auto auto 100px auto;
     text-align:center;
-    background-image: url('Abstract.jpeg');
+    background-image: url('17th.jpeg');
     background-size:100%;
     background-attachment:fixed;
     background-position:top;
-    padding:20px;
+/*    padding:20px;*/
     border: 2px solid black;
     color:white;
 }
-
 header h1{
     text-shadow:-1px -1px 2px black;
     font-size:48px;
