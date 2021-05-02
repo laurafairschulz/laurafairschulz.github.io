@@ -16,12 +16,6 @@ function openModal(fileName, title) {
         modal.appendChild(heading);
         modal.style.display = 'block';
         modal.addEventListener('click',closeModal);
-        document.onkeydown = function(e){
-            e = e || window.event;
-            if (e.keyCode === 27){
-                closeModal();
-            }
-        }
     }
     
 }
@@ -38,10 +32,34 @@ function closeModal() {
     body[0].style.margin = '8px';
 }
 
-var images = document.getElementsByTagName('img');
+var imgs = document.getElementsByTagName('img');
+var images = Array.from(imgs);
+var filenames = [];
 
 for (var i = 0; i < images.length; i++){
+    filenames.push(images[i].src);
     images[i].addEventListener('click', function(e){
-        openModal(this.src, this.alt);
+        openModal(this.src, this.alt, i);
     });
+}
+
+document.onkeydown = function(e){
+    var modal = document.getElementById('theModal');
+    if (modal.style.display === 'block'){
+        var fileName = document.getElementById('theSlide').src;
+        e = e || window.event;
+        if (e.keyCode === 27){
+            closeModal();
+        } else if (e.keyCode === 39) {
+            var i = images.findIndex(element => element.src === fileName);
+            var newImage = images[i + 1] === undefined ? images[0] : images[i + 1];
+            closeModal();
+            openModal(newImage.src, newImage.alt, i);
+        } else if (e.keyCode === 37) {
+            var i = images.findIndex(element => element.src === fileName);
+            var newImage = images[i - 1] === undefined ? images[images.length - 1] : images[i - 1];
+            closeModal();
+            openModal(newImage.src, newImage.alt, i);
+        }
+    }
 }
