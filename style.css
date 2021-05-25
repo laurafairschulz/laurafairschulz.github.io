@@ -16,7 +16,8 @@ img{
 }
 
 header{
-    max-width:500px;
+/*    max-width:500px;*/
+    width:65%;
     margin:auto auto 100px auto;
     text-align:center;
     background-image: url('17th.jpeg');
