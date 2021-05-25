@@ -96,3 +96,15 @@ main img:hover{
     object-fit:cover;
     border:1px solid white;
 }
+
+@media only screen and (max-width:705px){
+    header{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:480px){
+    img{
+        width:100%;
+    }
+}
